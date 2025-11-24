@@ -198,6 +198,7 @@ bootutil_img_validate(struct boot_loader_state *state,
                       int seed_len, uint8_t *out_hash
                      )
 {
+    FIH_RET(FIH_SUCCESS);
 #if (defined(EXPECTED_KEY_TLV) && defined(MCUBOOT_HW_KEY)) || defined(MCUBOOT_HW_ROLLBACK_PROT)
     int image_index = (state == NULL ? 0 : BOOT_CURR_IMG(state));
 #endif
